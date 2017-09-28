@@ -1,0 +1,69 @@
+html {
+  font-size: 16px;
+  margin-right: 100px;
+  margin-left: 100px;
+  background-color: grey; }
+
+@media (max-width: 314px) {
+  html {
+    margin-right: 20px;
+    margin-left: 20px; } }
+.header {
+  font-size: 24px;
+  background-color: red;
+  border: 8px solid white; }
+
+.header:hover {
+  border-color: red; }
+
+.row {
+  background-color: red;
+  color: white; }
+
+a {
+  text-decoration: underline;
+  color: white; }
+
+a:hover {
+  font-size: 140%; }
+
+.sidebar {
+  padding-bottom: 20px; }
+
+.blog-header {
+  a: hover;
+  a-color: red; }
+
+.blog-footer a:hover {
+  color: red; }
+
+/* 
+
+.header { 
+
+	background-color: #c6cbd3; 
+	color: white; 
+	font-size: 16px; 
+	// text-align: center; 
+	width: 800px;
+     	margin: 0 auto; 
+	text-align: center; 	
+} 
+
+.mainContent { 
+
+	background-color: #c6cbd3; 
+	color: white; 
+	font-size: 16px; 
+	// text-align: center; 
+	width: 800px;
+     	margin: 0 auto; 
+	text-align: center; 
+} 
+
+.sidebar { 
+	text-align: left; 
+} 
+*/
+
+/*# sourceMappingURL=blog.css.map */
