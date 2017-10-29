@@ -1,68 +1,80 @@
+@import 'animate';
+
 html {
-  font-size: 16px;
-  margin-right: 100px;
-  margin-left: 100px;
-  background-color: grey; }
+    font-style: italic;
+    font-size: 16px;
+    background-color: grey;
+    animation: fadeInDownBig 2s;
+}
 
 @media (max-width: 314px) {
   html {
     margin-right: 20px;
     margin-left: 20px; } }
 .header {
-  font-size: 24px;
-  background-color: red;
-  border: 8px solid white; }
-
-.header:hover {
-  border-color: red; }
+    animation: bounce 6s;
+    font-size: 24px;
+}
+.blog-title {
+    border-bottom: 2px dotted black;
+}
 
 .row {
-  background-color: red;
-  color: white; }
+   color: white; }
 
 a {
-  text-decoration: underline;
-  color: white; }
+    text-decoration: none;
+    color: yellow;
 
-a:hover {
-  font-size: 140%; }
+}
+h2:hover { // article title/s
+    animation: flip 1.4s;
+}
 
-.sidebar {
-  padding-bottom: 20px; }
+.sidebar { // sidebar.ejs
+    animation: slideInRight 4s;
+    position: fixed;
+}
 
-.blog-header {
-  a: hover;
-    a-color: red; }
+.blog-nav { // menu.ejs
+    position: fixed;
+    padding-top: 10px; 
+    font-size: 150%;
+    &:hover {
+        animation: swing 1s;
+    }
+}
 
 .blog-footer a:hover {
-  color: red; }
+
+}
 
 
-/* 
+/*
 
-.header { 
+.header {
 
-	background-color: #c6cbd3; 
-	color: white; 
-	font-size: 16px; 
-	// text-align: center; 
+	background-color: #c6cbd3;
+	color: white;
+	font-size: 16px;
+	// text-align: center;
 	width: 800px;
-     	margin: 0 auto; 
-	text-align: center; 	
-} 
+     	margin: 0 auto;
+	text-align: center;
+}
 
-.mainContent { 
+.mainContent {
 
-	background-color: #c6cbd3; 
-	color: white; 
-	font-size: 16px; 
-	// text-align: center; 
+	background-color: #c6cbd3;
+	color: white;
+	font-size: 16px;
+	// text-align: center;
 	width: 800px;
-     	margin: 0 auto; 
-	text-align: center; 
-} 
+     	margin: 0 auto;
+	text-align: center;
+}
 
-.sidebar { 
-	text-align: left; 
-} 
-*/ 
+.sidebar {
+	text-align: left;
+}
+*/
