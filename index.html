@@ -52,6 +52,39 @@
     <div class="blog-post">
     <!-- Title -->
     <h2 class="blog-post-title">
+        <a href="/2017/11/10/A-Simplified-Introduction-To-Objects-In-Javascript/">
+            A Simplified Introduction To Objects In Javascript
+        </a>
+    </h2>
+    <!-- Date and Author -->
+    <p class="blog-post-meta">
+        2017-11-10
+        
+    </p>
+    <!-- Content -->
+    <p>The scope of this post: this post will cover what objects are, how to create your own object and access an object�s data. But it will not touch on prototypes, parents and children, destroying objects and when to use a particular method of creating an object (it also ignores JSON format and leaves a lot out regarding scope). It also ignores many other topics related to object oriented programming. </p>
+<p>Firstly, what is an object and why might we want one? Objects can be containers of data - think �variables on steroids�, the great thing about them is that it can be a decent chunk of code written once but reused multiple times in multiple ways - this is accomplishable as you can create as many instances of an object as you want - an instance is essentially the object with it’s own ID meaning it won’t affect the others. They’re often used for namespacing too. Also, everything or at least most things in Javascript is an object. </p>
+<p>##How to create an object: There are three ma8n ways </p>
+<pre><code>/// Object Literal 
+var car = { 
+    fuelVariable: 300, 
+    driveFunction: function() {
+
+    } 
+}
+</code></pre><p>/// �new� and Constructor Functions (similar to classes - first letter should be capitalised)<br>var car = new Object;<br>function Person(age) {<br>   this.personAge = age;<br>}<br>var oldPerson = new Person(200); // new AnArray().localArray[1];<br>console.log(“age: “ + oldPerson.personAge); </p>
+<pre><code>
+</code></pre><p>var car2 = Object.create(car);<br>``` </p>
+<p>Try not to get confused by the syntax. To access data inside an object simply do �objectName.variableName� or �this.propertyName� if you’re inside the object - a property is anything you associate with that particular object. Personally I use the Constructor function or the Object Literal method which I’ll hopefully explain why in a future post. </p>
+
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+</div>
+
+
+    <div class="blog-post">
+    <!-- Title -->
+    <h2 class="blog-post-title">
         <a href="/2017/10/29/When-Automation-Is-Moral-My-Opinion/">
             When Automation Is Moral - My Opinion
         </a>
