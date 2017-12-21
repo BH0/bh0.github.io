@@ -63,7 +63,7 @@
     </p>
     <!-- Content -->
     <p>HTML5 Canvas Game - Present Collect </p>
-<p>In this blog post we will create a simple game using HTML5 Canvas and Javascript. You will learn how to deal with objects, organise your code and implementing simple game concepts such as a game loop and collision detection using Javascript. </p>
+<p>In this blog post we will create a simple game using HTML5 Canvas and Javascript. You will learn how to deal with objects, organise your code and implementing simple game concepts such as a game loop and collision detection using Javascript.<br><a id="more"></a> </p>
 <p>About our game, the player will be an elf character, and the user will use their mouse (by dragging) to move the player object towards a present which when collided with will increase the score, however if the player object collides with something which is not a present (�bad.jpg�) they will lose a point. </p>
 <p>Firstly, we must ensure we have the correct file/folder structure as well as the necessary assets. I�m no artist so you�re welcome to use my �placeholder� graphics which I have provided or use your own assets for graphics. We will be representing each game object by its own file, which will contain a constructor function - checkout my introduction to JS objects post: <a href="https://bh0.github.io/2017/11/10/A-Simplified-Introduction-To-Objects-In-Javascript/">https://bh0.github.io/2017/11/10/A-Simplified-Introduction-To-Objects-In-Javascript/</a> . </p>
 <p>Here is what the folder/file structure should look like </p>
@@ -73,11 +73,15 @@
 <li>index.html </li>
 <li>main.js </li>
 </ul>
-<h2 id="Firstly-in-our-index-file-we-have-this-I�m-going-to-skip-the-explanation-as-I-assume-you-know-HTML"><a href="#Firstly-in-our-index-file-we-have-this-I�m-going-to-skip-the-explanation-as-I-assume-you-know-HTML" class="headerlink" title="Firstly, in our index file we have this - I�m going to skip the explanation as I assume you know HTML. "></a>Firstly, in our index file we have this - I�m going to skip the explanation as I assume you know HTML. </h2><p>&lt;!DOCTYPE html&gt;</p>
+<p>Firstly, in our index file we have this - I�m going to skip the explanation as I assume you know HTML. </p>
+<hr>
+<p>&lt;!DOCTYPE html&gt;</p>
 <html class="no-js" lang=""><br>    <head><br>        <meta charset="utf-8"><br>        <meta http-equiv="x-ua-compatible" content="ie=edge"><br>        <title></title><br>        <meta name="description" content=""><br>        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><br>    </head><br>    <body><br>        <!-- Game View --><br>        <canvas id="canvas" width="640" height="480">Sorry, it seems your browser does not support canvas </canvas><br><br>        <!-- Dependancies --><br><br>        <!-- Music & Sound --><br><br>        <!-- Objects --><br>        <script src="objects/present.js"></script><br>        <script src="objects/hud.js"></script><br>        <script src="objects/elf.js"></script><br><br>        <!-- Main File --><br>        <script src="main.js"></script><br><br>    </body><br></html>
 
 <hr>
-<h2 id="The-following-is-our-main-js-file-without-the-game-logic-and-we-will-implement-each-feature-as-we-add-it"><a href="#The-following-is-our-main-js-file-without-the-game-logic-and-we-will-implement-each-feature-as-we-add-it" class="headerlink" title="The following is our main.js file without the game logic and we will implement each feature as we add it. "></a>The following is our main.js file without the game logic and we will implement each feature as we add it. </h2><p>/// Get Canvas &amp; Context<br>var canvas = document.getElementById(“canvas”);<br>var ctx = canvas.getContext(“2d”);</p>
+<p>The following is our main.js file without the game logic and we will implement each feature as we add it. </p>
+<hr>
+<p>/// Get Canvas &amp; Context<br>var canvas = document.getElementById(“canvas”);<br>var ctx = canvas.getContext(“2d”);</p>
 <p>canvas.style.cssText = “border:2px solid black”;</p>
 <p>/// Initiallize Objects<br>var elf;<br>var hud;<br>var present = [];</p>
 <p>/// Global Variables<br>var fps = 30; // frames per second<br>var canvasWidth = canvas.width;<br>var canvasHeight = canvas.height;<br>var intervals = 0;</p>
