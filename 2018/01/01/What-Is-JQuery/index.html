@@ -1,0 +1,126 @@
+<html>
+<!-- Head tag -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="A blog about programming.">
+    <meta name="author" content="BH0">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <link rel="icon" href="favicon/favicon.ico">
+    <title>BH0's Personal Blog</title>
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="/css/blog.css">
+
+    
+
+</head>
+
+<body>
+    <!-- Menu -->
+    <div class="blog-masthead">
+    <div class="container row center-xs middle-xs">
+        <nav class="blog-nav">
+            
+                <a class="blog-nav-item" href="/">Home |</a>
+            
+                <a class="blog-nav-item" href="/archives/">Archives |</a>
+            
+        </nav>
+    </div>
+</div>
+
+    <div class="container">
+        <!-- Blog Header: title and subtitle -->
+	<div class="header">
+        	<div class="blog-header">
+    <h1 class="blog-title">BH0&#39;s Blog</h1>
+    <p class="lead blog-description"></p>
+</div>
+
+	</div>
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-sm-8 blog-main">
+		         <div class="mainContent">
+	                <div class="blog-post">
+    <!-- Title -->
+    <h2 class="blog-post-title">
+        <a href="/2018/01/01/What-Is-JQuery/">
+            What Is JQuery
+        </a>
+    </h2>
+    <!-- Date and Author -->
+    <p class="blog-post-meta">
+        2018-01-01
+        
+    </p>
+    <!-- Content -->
+    <p>Please note that this is not a JQuery tutorial but aims to clear up some of the misconceptions regarding JQuery. </p>
+<p>When you search �what do I need to know to be a web developer?� one of the most common requirements is JQuery, and while this is somewhat true - it is not entirely accurate. JQuery is a collection of Javascript code, some call it a framework, I call it a library and others seem to think its an alternative to Javascript. JQuery is Javascript, the JQuery files all contain Javascript and JQuery do the same thing. </p>
+<p>Well, if they are the same - why is JQuery so popular? Simple answer: laziness (or convenience if you prefer). There are three main  purposes for JQuery: DOM selection + manipulation, AJAX requests, and lastly, interactivity effects such as �fade out when clicked, �, other uses for JQuery include styling elements easier, JQuery�s utilities and event handling. </p>
+<p>JQuery�s motto is do more with less - Javascript. Lets see how this JQuery allows us to do DOM manipulation. DOM selection/manipulation is when you make individual HTML elements / tags do particular stuff - using Javascript. </p>
+<p>The Javascript way of DOM selection (element targeting): </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">var myElement = document.getElementById(�elementId�); </div><div class="line">// note that there are variations of docuemnt.getElementById such as querySelector and getElementByClass name. </div></pre></td></tr></table></figure> 
+<p>The JQuery way of DOM selection:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">$(�elementId�).doSomething(); </div><div class="line">// or JQuery(�elementId�).doSomething(); - this is so JQuery doesn�t mess with any other libraries / frameworks you might be using. </div></pre></td></tr></table></figure> </p>
+<p>As you can see, when you have a lot of elements to select, the Javascript way can become tedious and lengthy, JQuery�s �dollar sign version� all do the same as the various Javascript commands. </p>
+<p>JQuery also has more convenient code for event handling - the following code will check for the mouse hovering over an element). </p>
+<p>Javascript:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">document.getElementById(�hover�),addEventListener(�hover�, function(e) &#123; </div><div class="line">	// do stuff </div><div class="line">&#125;); </div></pre></td></tr></table></figure><br>JQuery:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">$(�hover�).hover(function() &#123; </div><div class="line"></div><div class="line">&#125;);; </div></pre></td></tr></table></figure> </p>
+<p>JQuery is also used for AJAX requests - getting data from an external source.Whats great about JQuery�s AJAX code is that the various different types of requests (get, post etcetera) can be specified within the code much easier and you can define the behaviour of the request much quicker. </p>
+<p>JQuery also offers a lot of utilities which are commands which aid the develoepr such as �jquery.each();�. </p>
+<p>There is also something called JQuery UI. From the website: �JQuery UI is a curated set of user interface interactions, effects, widgets and themes built on top of the JQuery Javascript library�. </p>
+<p>And lastly, JQuery Mobile - which is categorized as a framework - a language which makes mobile application development possible using web technology. </p>
+<p>There are also many JQuery plugins which is essentially code not large enough to be defined as a library that extend JQuery made by the public. </p>
+<p>Some facts about JQuery: JQuery is often cached - meaning your browser stores a local copy of the library so that it doesn’t have to re-acquire JQuery from elsewhere each time you visit the website. Thus improving load speeds. Content management systems such as WordPress comes with JQuery already and it is best to use WordPress�s JQuery. JQuery is open source so you can improve it via their Github repository. </p>
+<p>So, remember, when you use JQuery - you’re still using Javascript. But never the less - learn vanilla Javascript, not JQuery - when you really need JQuery - that’s when it helps to learn JQuery. </p>
+<p>As Javascript can do everything JQuery can do, many developers recommend not using Jquery unless your application truly will make extensive use of Jquery, but if not then it is recommended to just use Javascript or a library smaller than Jquery designed to accomplish the specific task you want to accomplish, such as Axios for AJAX requests. This means you don’t have to have a massive library like Jquery bloating up your application when you’re only using a small percentage of JQuery. </p>
+
+    <hr />
+    <!-- Tags and Categories links -->
+    
+
+    
+
+</div>
+
+		           </div> 
+            </div>
+            <!-- Sidebar -->
+            <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+		<div class="sidebar">
+	                <div class="sidebar col-xs-2"> 	
+	<div class="sidebar-module sidebar-module-inset">
+    		<h4>About</h4>
+	    	<p> A technology blog. </p>
+	</div>
+	<div class="sidebar-module">
+		<h4>Archives</h4>
+    		<ol class="list-unstyled">
+		</ol>
+	</div>
+	<div class="sidebar-module">
+    		<h4>Elsewhere</h4>
+    		<ol class="list-unstyled">
+        		<li><a href="#">GitHub</a></li>
+        		<li><a href="#">Twitter</a></li>
+        		<!-- <li><a href="#">Facebook</a></li> -->
+    		</ol>
+	</div>
+</div>
+
+		</div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    
+    <!-- After footer scripts -->
+    
+</body>
+</html>
