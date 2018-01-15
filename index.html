@@ -53,6 +53,31 @@
     <div class="blog-post">
     <!-- Title -->
     <h2 class="blog-post-title">
+        <a href="/2018/01/14/7-Ways-Not-To-Learn-How-To-Code/">
+            7 Ways Not To Learn How To Code
+        </a>
+    </h2>
+    <!-- Date and Author -->
+    <p class="blog-post-meta">
+        2018-01-14
+        
+    </p>
+    <!-- Content -->
+    <p>There are a ton of �learn how to code�, �how do I learn how to code�, �best way to learn how to code� - and while this blog post is similar to those - it is also different in that it aims to point out those �traps� some people stumble into when pursuing their  journey of becoming a developer.<br>
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+        <p>
+            <a href="/2018/01/14/7-Ways-Not-To-Learn-How-To-Code/">
+                Read More
+            </a>
+        </p>
+    
+</div>
+
+
+    <div class="blog-post">
+    <!-- Title -->
+    <h2 class="blog-post-title">
         <a href="/2018/01/08/How-To-Use-AnimateCSS/">
             How To Use AnimateCSS
         </a>
@@ -288,57 +313,6 @@ var car = {
 <p>Anyways, back to asking for help - or at least sharing your problem / activity and not suffering in silence.</p>
 <p>If you have something to share, share it with others, they might be able to help. By sharing your successes AND STRUGGLES with others you�ll improve your ability to communicate, are relieving yourself from unwanted stress, are stimulating the minds of others (many benefits to this) and you might actually make it through your current struggle.</p>
 <p>Just to clarify, the intention of this post is to inform you that socialising can actually be productive even when you think it won�t be. Thanks for reading.</p>
-
-    <!-- Only display the Read More link if we are displaying an excerpt -->
-    
-</div>
-
-
-    <div class="blog-post">
-    <!-- Title -->
-    <h2 class="blog-post-title">
-        <a href="/2017/09/28/Learn-the-basics-of-Brainfuk-and-Pseudocode/">
-            Learn the basics of Brainfuk and Pseudocode
-        </a>
-    </h2>
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2017-09-28
-        
-    </p>
-    <!-- Content -->
-    <p>2017-08-01</p>
-<h1 id="Learn-the-basics-of-Brainfuck-and-Pseudocode"><a href="#Learn-the-basics-of-Brainfuck-and-Pseudocode" class="headerlink" title="Learn the basics of Brainfuck and Pseudocode."></a>Learn the basics of Brainfuck and Pseudocode.</h1><h2 id="What-is-Pseudocode"><a href="#What-is-Pseudocode" class="headerlink" title="What is Pseudocode?"></a>What is Pseudocode?</h2><p>Pseudocode is an readable vocabulary used for designing programs. It assists designers and developers both understand the design requirements of a program such as what the program should do and how the program will achieve what it needs to do. It is important to remember that Pseudocode is not a real programming language, but I tend to imagine it as a simplified programming language (one reason I like programming languages such as Cobol and Ruby is because they resemble Pseudocode).</p>
-<h2 id="What-is-Brainfuck"><a href="#What-is-Brainfuck" class="headerlink" title="What is Brainfuck?"></a>What is Brainfuck?</h2><p>Unlike Pseudocode, Brainfuck is a real programming language. Brainfuck belongs to a categorically of programming languages referred to as esoteric-programming-languages (esolangs for short). Esolangs are real programming languages usually designed to prove a point but arent intended for industry standard use. Brainfucks design is incredibly minimlist.</p>
-<h2 id="What-will-be-using-Pseudocode-for"><a href="#What-will-be-using-Pseudocode-for" class="headerlink" title="What will be using Pseudocode for?"></a>What will be using Pseudocode for?</h2><p>Brainfuck (for the most part) is not a nice programming language to write in, so to ensure we have a general idea of our program, we will use Pseudocde - which will serve as a suitable reference whilst were developing the actual program. Think of a Pseudocode as a to do list.</p>
-<h2 id="What-will-be-making-using-Brianfuck"><a href="#What-will-be-making-using-Brianfuck" class="headerlink" title="What will be making using Brianfuck?"></a>What will be making using Brianfuck?</h2><p>To be honest, I cant really do much in Brainfuck, so we will be keeping things super simple and simply outputting (displaying) a line (or so) of text. This text can be your name, country just make sure it isnt too long - about less than 15 characters will be fine.</p>
-<h2 id="Why-is-Pseudocode-important"><a href="#Why-is-Pseudocode-important" class="headerlink" title="Why is Pseudocode important?"></a>Why is Pseudocode important?</h2><p>While it is unlikely that we will forget the end-goal of this program, for larger programs, it can be difficult (sometimes even tedious) to remember every step to our program, so we use Pseudocode to ensure we know the general outline of our program, then we can pick the language were going to develop it with and get on with other important tasks.</p>
-<h2 id="The-basics-of-Brainfuck"><a href="#The-basics-of-Brainfuck" class="headerlink" title="The basics of Brainfuck"></a>The basics of Brainfuck</h2><p>Brainfuck has only 8 commands, Most tasks are generally accomplished using a while loop. It is represented by an array (a row) of cells, and has a pointer - which we will use to point to a cell of our choosing.</p>
-<h2 id="Brainfuck-commands"><a href="#Brainfuck-commands" class="headerlink" title="Brainfuck commands:"></a>Brainfuck commands:</h2><ul>
-<li>Increment (add) cell value</li>
-</ul>
-<ul>
-<li>Decrement cell value<blockquote>
-<p>Move pointer one cell to the right<br>&lt; Move pointer one cell to the left<br>. Output (display) cells ASCII value<br>, Wait for input<br>[ &amp; ] These are used to signify loops, for the [ unless the current cells value is 0 it enters a loop, for the ] if the cells value is 0, it exits the loop and goes to the next instruction (assuming there is one), however, if the cells value is not 0, it will move backwards and go to the preceding instruction</p>
-</blockquote>
-</li>
-</ul>
-<p>Brainfuck (depending on the version) will not read any commands other than the 8 which I have listed, this means that plain text can be written in your program, but to make things more readable we are going to use a # symbol to distinguish between our codes commands from a comment. Comments are simply just notes in the programmer for the developer.<br>I mentioned something called ASCII, on a (common) keyboard, each key has an ID, this ID is known as its ASCII value which the computer uses to associate the key with a particular character. For example, the ASCII value of the space-bar is</p>
-<h2 id="Environment-Setup"><a href="#Environment-Setup" class="headerlink" title="Environment Setup"></a>Environment Setup</h2><p>We will now setup our tools and endure we are ready to work, preparation / organisation is one of the keys to successful programming so let�s prepare. To make tasks easier we will be using two tools, a Brainfuck Visualiser - which we will use to make and test our program<br>An ASCII to Text Converter - because there�s no little reason to memorise ASCII codes this tool will give us the desired value.</p>
-<p>ASCII to Text Convertor:.<a href="http://www.unit-conversion.info/texttools/ascii/" target="_blank" rel="external">http://www.unit-conversion.info/texttools/ascii/</a><br>Brainfuck Visualiser: <a href="https://fatiherikli.github.io/brainfuck-visualizer/" target="_blank" rel="external">https://fatiherikli.github.io/brainfuck-visualizer/</a></p>
-<p>The Visualiser will come in handy for debugging (finding and removing issued) our program as it displays the behavior of our program in real-time. You�re welcome to use an ASCII table of your choice so long as you have access the desired values. And a text-editor or pen+paper may come in useful for note-taking and writing our pseudocode. A calculator may be useful too. Visit the two links I provided, I recommend having them both open in separate tabs let�s delete the default example program in the Visualiser. We will now make a short Brainfuck program to ensure everything is working. Let�s output the number zero (accomplished by multiplying 16 by 3 as this equals 48 - the ASCII value for zero).</p>
-<p>Code: +++ [&gt; ++++ ++++ ++++ ++++ &lt;-] &gt;.</p>
-<h2 id="The-Pseudocode-of-our-program"><a href="#The-Pseudocode-of-our-program" class="headerlink" title="The Pseudocode of our program"></a>The Pseudocode of our program</h2><p>For simplicity, I�ll be using the word programming. I�m deliberately choosing an odd numbered word to demonstrate a useful technique I use (note that you may have to alter your Pseudocode if you have chosen a smaller or larger word than mine.) .</p>
-<h2 id="Pseudocode"><a href="#Pseudocode" class="headerlink" title="Pseudocode:"></a>Pseudocode:</h2><p>Move pointer one cell to the right<br>Use a loop to increment this cell to 112 (by multiplying 14 by 8)<br>Move pointer one cell to the right<br>Output the ASCII value of this cell<br>Increment this cell by 2<br>Output the ASCII value of this cell<br>Decrement this cell by 3<br>Output the ASCII value of this cell<br>Decrement this cell by 8<br>Output the ASCII value of this cell<br>Increment this cell by 11<br>Output the ASCII value of this cell<br>Decrement this cell by 12<br>Output the ASCII value of this cell<br>Output the ASCII value of this cell<br>Decrement this cell by 4<br>Output the ASCII value of this cell<br>Increment this cell by 5<br>Output the ASCII value of this cell<br>Decrement the value of this cell by 7<br>Output the ASCII value of this cell</p>
-<h2 id="The-actual-program"><a href="#The-actual-program" class="headerlink" title="The actual program"></a>The actual program</h2><p>When I typed the word programming into the ASCII -to-Text Convertor it produced the following values 112 114 111 103 114 097 109 109 105 110 103- the ASCII value of p is 112 and so on. Type your word into the ASCII-to-Text convertor and paste the values into the Brainfuck Visualiser for ease of reference like so.</p>
-<p>Code: # 112 114 111 103 114 097 109 109 105 110 103</p>
-<p>Here is our Pseudocode alongside the actual code (Pseudocode lines will be comments)</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code:"></a>Code:</h2><p>// ASCII Values: 112 114 111 103 114 097 109 109 105 110 103</p>
-<p>// Move pointer one cell to the right<br>+++++ +++++ ++++ [&gt; ++++ ++++ &lt; -] # Use a loop to increment this cell to 112 (by multiplying 14 by 8)<br>// Move pointer one cell to the right<br>. // Output the ASCII value of this cell<br>++ // Increment this cell by 2<br>. // Output the ASCII value of this cell<br>� // Decrement this cell by 3<br>. // Output the ASCII value of this cell<br>�� � // Decrement this cell by 8<br>. // Output the ASCII value of this cell<br>+++++ +++++ + // Increment this cell by 11<br>. // Output the ASCII value of this cell<br>�� �� �� � # Decrement this cell by 12<br>. // Output the ASCII value of this cell<br>+++++ +++++ ++ # Increment this cell by 7<br>. // Output the ASCII value of this cell<br>. // Output the ASCII value of this cell<br>�- // Output the ASCII value of this cell<br>. // Output the ASCII value of this cell<br>+++++ // Output the ASCII value of this cell<br>�� � // Decrement this cell by 7<br>. // Output the ASCII value of this cell</p>
-<p>Note that a common goal of using Brainfuck is to make the smallest program as possible, so here is the short version of this program. As Brainfuck doesnt care about whitespace (newlines, spaces, indentations) we can have our program all on the same line, this however is generally avoided in other programming languages for readability.</p>
-<h2 id="Code-1"><a href="#Code-1" class="headerlink" title="Code:"></a>Code:</h2><p>// Program which outputs the word �programming�<br>// ASCII Values: 112 114 111 103 114 097 109 109 105 110 103</p>
-<p>+++++ +++++ ++++ [&gt; ++++ ++++ &lt; -] &gt; . ++ . � . �� � .<br>+++++ +++++ + . �� �� �� � . +++++ +++++ ++ . . �- .<br>+++++ . �� � .</p>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Congratulations, you have made a program in Brainfuck which outputs a string (a piece of text), yes you couldve done this without Pseudocode, but then you would be risking disastrous consequences such as forgetting the goal of your program, the next step you were to take and the general flow of your program - thanks to Pseudocode we can avoid these catastrophes, we can also adapt our Pseudocode and can use it for designing (and developing) programs of all sizes.</p>
 
     <!-- Only display the Read More link if we are displaying an excerpt -->
     
