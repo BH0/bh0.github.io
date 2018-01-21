@@ -1,0 +1,151 @@
+<html>
+<!-- Head tag -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="A blog about programming.">
+    <meta name="author" content="BH0">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <link rel="icon" href="favicon/favicon.ico">
+    <title>BH0's Personal Blog</title>
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="/css/blog.css">
+
+    
+
+</head>
+
+<body>
+    <!-- Menu -->
+    <div class="blog-masthead">
+    <div class="container row center-xs middle-xs">
+        <nav class="blog-nav">
+            
+                <a class="blog-nav-item" href="/">Home |</a>
+            
+                <a class="blog-nav-item" href="/archives/">Archives |</a>
+            
+        </nav>
+    </div>
+</div>
+
+    <div class="container">
+        <!-- Blog Header: title and subtitle -->
+	<div class="header">
+        	<div class="blog-header">
+    <h1 class="blog-title">BH0&#39;s Blog</h1>
+    <p class="lead blog-description"></p>
+</div>
+
+	</div>
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-sm-8 blog-main">
+		         <div class="mainContent">
+	                <div class="blog-post">
+    <!-- Title -->
+    <h2 class="blog-post-title">
+        <a href="/2018/01/21/Send-HTML-Email-With-PHP/">
+            Send HTML Email With PHP
+        </a>
+    </h2>
+    <!-- Date and Author -->
+    <p class="blog-post-meta">
+        2018-01-21
+        
+    </p>
+    <!-- Content -->
+    <p>Hello, in this blog we will learn how to send an email which is a HTML file using PHP and the emails we will get from a JSON file - because I really like JSON. Please note that this may only work with a Gmail account.<br><a id="more"></a> </p>
+<h2 id="What-will-we-use"><a href="#What-will-we-use" class="headerlink" title="What will we use?"></a>What will we use?</h2><ul>
+<li>PHP - duh </li>
+<li>Laragon - a local Apache server </li>
+<li>JSON - a method of storing data </li>
+<li>HTML - and CSS to produce the email’s appearance </li>
+</ul>
+<h2 id="Set-up"><a href="#Set-up" class="headerlink" title="Set up"></a>Set up</h2><p>Firstly, we will need to install and configure Laragon, Laragon will give us access to PHP, Apache web-server, and a “mail sender”. </p>
+<p>We will also need three files: “index.php” - the file which will contain our code, “email.html” - the email we wish to send and “mailinglist.json” - the file which our emails come from (yes you can use another source such as a simple array or a database). </p>
+<h3 id="Laragon-Set-up"><a href="#Laragon-Set-up" class="headerlink" title="Laragon Set up"></a>Laragon Set up</h3><p>Navigate to Laragon’s website’s download section: <a href="https://laragon.org/download/" target="_blank" rel="external">https://laragon.org/download/</a> and select one of the downloads, I use “Laragon Wamp” but theoretically anything including PHP and Apache should work. </p>
+<p>Follow the installation wizard and things should be fairly straight forward. </p>
+<ul>
+<li>When the download is complete open the Laragon Window and click the “gear icon” - “preferences”. </li>
+<li>Navigate to the “Mail Sender” configuration area by clicking on the “Mail Sender” tab </li>
+<li>Enter your Gmail account username + password </li>
+<li>Feel free to press “Test Sending Mail…” to ensure everything is set up correctly </li>
+<li>Exit this Window and click “Start All” to run the server </li>
+<li>Click “Menu” then navigate to “Quick Create” and select “blank” </li>
+<li>Name the project appropriately - this is the root folder’s name for all your files </li>
+<li>And everything should be good to go (you may have to give Laragon permission) </li>
+<li>Now ensure you create 3 (or at least 2) files within your project folder: “index.php”, “email.html” and optionally “mailinglist.json” </li>
+</ul>
+<h2 id="The-Code"><a href="#The-Code" class="headerlink" title="The Code"></a>The Code</h2><h3 id="Email"><a href="#Email" class="headerlink" title="Email"></a>Email</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line"></div><div class="line">&lt;h2&gt; Email to YOU &lt;/h2&gt;</div><div class="line">&lt;p&gt; This is an email sent using PHP &lt;/p&gt;</div><div class="line">&lt;p&gt; Why isn&apos;t this responsive? &lt;/p&gt;</div><div class="line">&lt;div&gt;&lt;b&gt; Because the writer was too lazy to produce / obtain a responsive HTML email&lt;/b&gt;</div><div class="line">&lt;br&gt;</div><div class="line">&lt;ul&gt; Email sent using</div><div class="line">    &lt;li&gt; Laragon &lt;/li&gt;</div><div class="line">    &lt;li&gt; PHP &lt;/li&gt;</div><div class="line">    &lt;li&gt; Apache &lt;/li&gt;</div><div class="line">    &lt;li&gt; JSON &lt;/li&gt;</div><div class="line">    &lt;li&gt; HTML &lt;/li&gt;</div><div class="line">&lt;/ul&gt;</div><div class="line"></div></pre></td></tr></table></figure> 
+<p>Feel free to use a responsive HTML email here, to learn how to do so I recommend Devtip’s “How to Code a Responsive HTML Email” - <a href="https://youtu.be/XnWIperMy08" target="_blank" rel="external">https://youtu.be/XnWIperMy08</a>  , I may make my own tutorial on this - just note that you must use inline styling. I assume you can read HTML. </p>
+<h3 id="mailinglist-json"><a href="#mailinglist-json" class="headerlink" title="mailinglist.json"></a>mailinglist.json</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">&#123;</div><div class="line">    &quot;emails&quot;: [ &quot;example@example.ex&quot;, &quot;example@example.ex&quot;]</div><div class="line">&#125;</div></pre></td></tr></table></figure> 
+<p>Don’t forget to swap out this file with your desired email addresses. Or you can use your own email-source. I like work with tools which return J/BSON so I used JSON. </p>
+<h3 id="index-php"><a href="#index-php" class="headerlink" title="index.php"></a>index.php</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">&lt;?php</div><div class="line"></div><div class="line">/// Obtain Email Content</div><div class="line">$email = file_get_contents(&quot;email.html&quot;);</div><div class="line"></div><div class="line">/// Will help let the server/s know this is an HTML file</div><div class="line">$headers = &apos;Content-type: text/html; charset=UTF-8&apos; . &quot;\r\n&quot;;</div><div class="line"></div><div class="line">//$recipients = array(&quot;example@example.ex&quot;, &quot;example@example.ex&quot;);</div><div class="line"></div><div class="line">// Obtain Emails From JSON file</div><div class="line">$mailinglist = json_decode(file_get_contents(&apos;mailinglist.json&apos;), true);</div><div class="line">$recipients = $mailinglist[&apos;emails&apos;];</div><div class="line"></div><div class="line">/// Send Email</div><div class="line">foreach ($recipients as $recipient) &#123;</div><div class="line">    if (mail($recipient, &quot;the subject&quot;, $email, $headers)) &#123;</div><div class="line">        echo &apos; Your email has been sent successfully.&apos;;</div><div class="line">    &#125; else &#123;</div><div class="line">        echo &apos;Failed to send email. &apos;;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">?&gt;</div><div class="line"></div><div class="line">&lt;h2&gt;Attempted to send email sent to &lt;?php for ($i = 0; $i &lt; sizeof($recipients); $i += 1) &#123;</div><div class="line">    echo &apos; Email: &apos; . $recipients[$i];</div><div class="line">&#125; ?&gt; &lt;/h2&gt;</div><div class="line"></div></pre></td></tr></table></figure> 
+<p>What this code does: </p>
+<ul>
+<li>get the email content by reading the file contents </li>
+<li>The header variable is then used to make it clear to our tools that we the file contents should be HTML thus it will not output the HTML as a text file </li>
+<li>We then get the emails from the mailinglist file - if you’re unfamilliar with JSON I suggest reading up on it </li>
+<li>As our emails are stored in an array - we then loop through this array to send an individually email to each email address </li>
+<li>We then output some sort of message to inform the person sending the emails that everything was a success </li>
+</ul>
+<p>Notice the “the subject” parameter - as an extra curriculum task you’re welcome to figure out how to get the header element’s contents of your email and use this as the subject but I didn’t feel that was in the scope of this tutorial. </p>
+<p>To run this code open up the Laragon menu: </p>
+<ul>
+<li>Ensure your server is running </li>
+<li>Click menu &gt; “www” &gt; select [your project name]<br>And it will open in a web browser and display the HTML output and run the PHP code - if you have no errors your email should be sitting within the appropriate inboxes. </li>
+</ul>
+<p>And yes, you can continue to automate this much more, for example, making the code run at a specific time and perhaps adjusting it to work with multiple emails. </p>
+<p>The possibillities are theoretically endless. </p>
+
+    <hr />
+    <!-- Tags and Categories links -->
+    
+
+    
+
+</div>
+
+		           </div> 
+            </div>
+            <!-- Sidebar -->
+            <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+		<div class="sidebar">
+	                <div class="sidebar col-xs-2"> 	
+	<div class="sidebar-module sidebar-module-inset">
+    		<h4>About</h4>
+	    	<p> A technology blog. </p>
+	</div>
+	<div class="sidebar-module">
+		<h4>Archives</h4>
+    		<ol class="list-unstyled">
+		</ol>
+	</div>
+	<div class="sidebar-module">
+    		<h4>Elsewhere</h4>
+    		<ol class="list-unstyled">
+        		<li><a href="#">GitHub</a></li>
+        		<li><a href="#">Twitter</a></li>
+        		<!-- <li><a href="#">Facebook</a></li> -->
+    		</ol>
+	</div>
+</div>
+
+		</div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    
+    <!-- After footer scripts -->
+    
+</body>
+</html>
