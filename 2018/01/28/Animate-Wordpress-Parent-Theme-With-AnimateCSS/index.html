@@ -1,0 +1,123 @@
+<html>
+<!-- Head tag -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="A blog about programming.">
+    <meta name="author" content="BH0">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <link rel="icon" href="favicon/favicon.ico">
+    <title>BH0's Personal Blog</title>
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="/css/blog.css">
+
+    
+
+</head>
+
+<body>
+    <!-- Menu -->
+    <div class="blog-masthead">
+    <div class="container row center-xs middle-xs">
+        <nav class="blog-nav">
+            
+                <a class="blog-nav-item" href="/">Home |</a>
+            
+                <a class="blog-nav-item" href="/archives/">Archives |</a>
+            
+        </nav>
+    </div>
+</div>
+
+    <div class="container">
+        <!-- Blog Header: title and subtitle -->
+	<div class="header">
+        	<div class="blog-header">
+    <h1 class="blog-title">BH0&#39;s Blog</h1>
+    <p class="lead blog-description"></p>
+</div>
+
+	</div>
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-sm-8 blog-main">
+		         <div class="mainContent">
+	                <div class="blog-post">
+    <!-- Title -->
+    <h2 class="blog-post-title">
+        <a href="/2018/01/28/Animate-Wordpress-Parent-Theme-With-AnimateCSS/">
+            Animate Wordpress Parent Theme With AnimateCSS
+        </a>
+    </h2>
+    <!-- Date and Author -->
+    <p class="blog-post-meta">
+        2018-01-28
+        
+    </p>
+    <!-- Content -->
+    <p>In this tutorial we will learn how to animate a Wordpress parent (or master) theme, we will use AnimateCSS (because I’m currently too lazy to make my own animations) but theoretically this method will work with other libraries.<br><a id="more"></a> </p>
+<p>Now, please remember that we will be building the animations directly into our parent theme, some users might not want this functionallity so it may not be advisable for a distributed theme but never the less this tutorial will hopefully provide a fun way of learning how Wordpress differs from the typical HTML/CSS/JS development process. </p>
+<p>We won’t be learning how to do this with a child-theme (which actually might be preferable), nor will we learn how to allow the user to choose whether they want the animation to work or not via the Wordpress admin area/s. If you’re not wanting to code their are plugins which will essentially allow us to do what we’re going to do without using code (or at least not a lot of code) but I like (love <em>cough cough</em>) code so I’ll be using code. To learn more about AnimateCSS you’re welcome to checkout a post I produced regarding it: <a href="https://bh0.github.io/2018/01/08/How-To-Use-AnimateCSS/">https://bh0.github.io/2018/01/08/How-To-Use-AnimateCSS/</a> - In this tutorial we won’t be using JQuery but filling in the gaps so that JQuery can be used is fairly simple. </p>
+<p>Lets get started. The files we are going to be focusing on are AnimateCSS’s file which we are yet to add, as well as functions.php. You might be tempted just to put AnimateCSS in your header.php file but this is not “the Wordpress way”. </p>
+<p>First we need a Javascript script which will help us toggle the animations much easier allowing us to easily trigger the animations upon events - the code for this comes directly from my other AnimteCSS blog post (which is linked above). We then need to enqueue our script in functions.php to ensure it loads at the approrpiate time. We also need to enqueue our AnimateCSS file (or whatever other tool we are using). As well as JQuery if you so wish to do so. I will be using Wordpress’s 2017 theme but this should work with just about any correctly built parent theme. And lastly, we obviously have to associate an element with an animation. </p>
+<h1 id="Setup"><a href="#Setup" class="headerlink" title="Setup"></a>Setup</h1><h2 id="toggleAnimation-js"><a href="#toggleAnimation-js" class="headerlink" title="toggleAnimation.js"></a>toggleAnimation.js</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">                    // ID     | animation </div><div class="line">function animate(elementString, animation) &#123;</div><div class="line">		// get the element passed as a parameter</div><div class="line">		var element = document.getElementById(elementString); </div><div class="line">		// add animated + our desired animation which was passed as the second parameter</div><div class="line">		element.className += &quot; animated &quot;+animation;</div><div class="line">		// wait for 1000 *time-unit*</div><div class="line">		var wait = setTimeout(function() &#123;</div><div class="line">			// then remove the className thus stopping the animation</div><div class="line">			element.className -= &quot; animated &quot;+animation;</div><div class="line">		&#125;, 1000);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	</div></pre></td></tr></table></figure> 
+<p>You can put this code in whatever Javascript file you like so long as the script is enqueued within functions.php. To enqueue it we simply do: I recommend you ensure its in a file which is enqeued before any other scripts which might rely on it. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">function enqueueScripts() &#123; // the name of this function may vary accross themes </div><div class="line">	wp_enqueue_script(&apos;main_js&apos;, get_template_directory_uri() .&apos;/js/main.js&apos;, null, true);</div><div class="line"> </div><div class="line">	// or: 	wp_enqueue_script( &apos;twentyseventeen-global&apos;, get_theme_file_uri( &apos;/assets/js/animate.js&apos; ), array( &apos;jquery&apos; ), &apos;1.0&apos;, true );</div><div class="line"> </div><div class="line">&#125; </div><div class="line">add_action( &apos;wp_enqueue_scripts&apos;, &apos;enqueueScripts&apos; );</div><div class="line"> </div></pre></td></tr></table></figure> 
+<p>You would do something similar if you are using JQuery (as Wordpress has JQuery within its core - note that you can also include JQuery as a dependancy of your script). This ensures Wordpress can find your script files and that they are loaded at the appropriate time. </p>
+<h2 id="Including-AnimateCSS"><a href="#Including-AnimateCSS" class="headerlink" title="Including AnimateCSS"></a>Including AnimateCSS</h2><p>To load AnimateCSS we will first download the Aniamte CSS file and place it within our theme - it can go within the theme’s root folder or a CSS folder - you might even decide to copy the code directly into style.css but I won’t. We will then have to enqueue this similar to above and how we enqueue our style.css file. There are actually two ways I consider appropriate that you can do this - either using the CSS import rule or similar to what you done with the style.css file within functions.php. Also, feel free to use the minified version - the process is the same. </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">/* Inside functions.php */ </div><div class="line">function enqueueScripts() &#123; // can be a different function if you wish </div><div class="line">wp_register_style(</div><div class="line">    &apos;animate-css&apos;, // handle name</div><div class="line">    get_template_directory_uri() . &apos;/css/animate.css&apos;, // the URI of the stylesheet</div><div class="line">    array( &apos;any-dependancies-if-so&apos; ), // optional: array of dependancies </div><div class="line">    &apos;1.0&apos;, &apos;screen&apos;, // CSS media type</div><div class="line">); </div><div class="line">wp_enqueue_style(</div><div class="line">    &apos;animate-css&apos;,</div><div class="line">    get_template_directory_uri() . &apos;/css/animate.css&apos;,</div><div class="line">    array( &apos;dependancies&apos; ),</div><div class="line">    1.0, &apos;screen&apos; </div><div class="line">); </div><div class="line">&#125; </div><div class="line">add_action( &apos;wp_enqueue_scripts&apos;, &apos;enqueueScripts&apos; );</div><div class="line"> // if not already done so </div><div class="line"></div><div class="line">/* Or if you prefer, inside any CSS (or SASS) file - meaning you won&apos;t need to do the other code: */ </div><div class="line">@import &apos;animate.css&apos;; </div></pre></td></tr></table></figure> 
+<p>We then simply choose an element we wish to animate, tell the approrpiate Javascript to work its magic and we should see what I assume will be a beatiful animation as the user browses the web-page. </p>
+<p>Using our above function this can be done by first, giving the element we wish to be animated an appropriate ID:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">&lt;h1 id=&quot;animateH1&quot;&gt;&lt;?php echo (some PHP) this element should be animated ?&gt;&lt;/h1&gt; </div></pre></td></tr></table></figure> </p>
+<p>Then by using our “animate” function:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> </div><div class="line">animate(&apos;animateH1&apos;, &apos;bounce infinite&apos;); // bounce - the animation you want + if you want it to last forever </div></pre></td></tr></table></figure> </p>
+<h2 id="I-want-to-keep-going"><a href="#I-want-to-keep-going" class="headerlink" title="I want to keep going"></a>I want to keep going</h2><p>You might want to build functionallity into your theme which allows the user to choose if the animation will occur. And you might even be brave enough to make it so that the user can choose their own animation/s (from a pre-determined set of options). And perhaps they can adjust the behavior (speed etcetera) of the animation. </p>
+
+    <hr />
+    <!-- Tags and Categories links -->
+    
+
+    
+
+</div>
+
+		           </div> 
+            </div>
+            <!-- Sidebar -->
+            <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+		<div class="sidebar">
+	                <div class="sidebar col-xs-2"> 	
+	<div class="sidebar-module sidebar-module-inset">
+    		<h4>About</h4>
+	    	<p> A technology blog. </p>
+	</div>
+	<div class="sidebar-module">
+		<h4>Archives</h4>
+    		<ol class="list-unstyled">
+		</ol>
+	</div>
+	<div class="sidebar-module">
+    		<h4>Elsewhere</h4>
+    		<ol class="list-unstyled">
+        		<li><a href="#">GitHub</a></li>
+        		<li><a href="#">Twitter</a></li>
+        		<!-- <li><a href="#">Facebook</a></li> -->
+    		</ol>
+	</div>
+</div>
+
+		</div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    
+    <!-- After footer scripts -->
+    
+</body>
+</html>
