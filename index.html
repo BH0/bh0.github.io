@@ -79,6 +79,30 @@
     <div class="blog-post">
     <!-- Title -->
     <h2 class="blog-post-title">
+        <a href="/2018/02/09/Twitter-Bot-Tweet-A-Heart-Image/">
+            Twitter Bot - Tweet A Heart Image
+        </a>
+    </h2>
+    <!-- Date and Author -->
+    <p class="blog-post-meta">
+        2018-02-09
+        
+    </p>
+    <!-- Content -->
+    <p>In this tutorial we will learn how to make a simple Twitter bot which tweets an image and using the Twit package.<br><!-- read more --><br>Prequisites: Basic Node &amp; NPM (command line), Javascript usage, and some familiarity with “get” and “post” requests to a server.</p>
+<p>Firstly, create a folder then inside that folder run “npm init” with the following data (and feel free to modify this). Ensure the following is inside your “package.json” then run “npm install” as well as “npm install twit –save”:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;name&quot;: &quot;twitterbot&quot;,</div><div class="line">  &quot;version&quot;: &quot;1.0.0&quot;,</div><div class="line">  &quot;description&quot;: &quot;&quot;,</div><div class="line">  &quot;main&quot;: &quot;bot.js&quot;,</div><div class="line">  &quot;scripts&quot;: &#123;</div><div class="line">    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</div><div class="line">  &#125;,</div><div class="line">  &quot;author&quot;: &quot;&quot;,</div><div class="line">  &quot;license&quot;: &quot;ISC&quot;,</div><div class="line">  &quot;dependencies&quot;: &#123;</div><div class="line">    &quot;twit&quot;: &quot;^2.2.9&quot;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>The “bot.js” is our main file, and will be contain the code for our bot. First time I tried making a Twitter bot without Twit I couldn’t even get it working due to server connectivity + communication issues. Thanks to the Twit package, we aren’t likely to suffer from the problems I suffered from. The tutorial is split into two parts: setting up our Twitter bot and ensuring it works, then we will produce the code to make it more interesting.</p>
+<h2 id="The-Setup"><a href="#The-Setup" class="headerlink" title="The Setup"></a>The Setup</h2><h2 id="The-Fun-Stuff"><a href="#The-Fun-Stuff" class="headerlink" title="The Fun Stuff"></a>The Fun Stuff</h2><h2 id="The-Future"><a href="#The-Future" class="headerlink" title="The Future"></a>The Future</h2><p>You can do all sorts of cool things with Twitter bots, you could make a chat-bot, and in the future I may update this blog post (or make a new one) which teaches us how to make a front-end webpage which allows the user to upload their own image and make our bot Tweet it. Obviously, I assume you will use the information I provide appropriately. </p>
+
+    <!-- Only display the Read More link if we are displaying an excerpt -->
+    
+</div>
+
+
+    <div class="blog-post">
+    <!-- Title -->
+    <h2 class="blog-post-title">
         <a href="/2018/01/28/Animate-Wordpress-Parent-Theme-With-AnimateCSS/">
             Animate Wordpress Parent Theme With AnimateCSS
         </a>
@@ -273,39 +297,6 @@
                 Read More
             </a>
         </p>
-    
-</div>
-
-
-    <div class="blog-post">
-    <!-- Title -->
-    <h2 class="blog-post-title">
-        <a href="/2017/11/10/A-Simplified-Introduction-To-Objects-In-Javascript/">
-            A Simplified Introduction To Objects In Javascript (ES5)
-        </a>
-    </h2>
-    <!-- Date and Author -->
-    <p class="blog-post-meta">
-        2017-11-10
-        
-    </p>
-    <!-- Content -->
-    <p>The scope of this post: this post will cover what objects are, how to create your own object and access an object�s data. But it will not touch on prototypes, parents and children, destroying objects and when to use a particular method of creating an object (it also ignores JSON format and leaves a lot out regarding scope). It also ignores many other topics related to object oriented programming. </p>
-<p>Firstly, what is an object and why might we want one? Objects can be containers of data - think �variables on steroids�, the great thing about them is that it can be a decent chunk of code written once but reused multiple times in multiple ways - this is accomplishable as you can create as many instances of an object as you want - an instance is essentially the object with it’s own ID meaning it won’t affect the others. They’re often used for namespacing too. Also, everything or at least most things in Javascript is an object. </p>
-<p>##How to create an object: There are three ma8n ways </p>
-<pre><code>/// Object Literal 
-var car = { 
-    fuelVariable: 300, 
-    driveFunction: function() {
-
-    } 
-}
-</code></pre><p>/// �new� and Constructor Functions (similar to classes - first letter should be capitalised)<br>var car = new Object;<br>function Person(age) {<br>   this.personAge = age;<br>}<br>var oldPerson = new Person(200); // new AnArray().localArray[1];<br>console.log(“age: “ + oldPerson.personAge); </p>
-<pre><code>
-</code></pre><p>var car2 = Object.create(car);<br>``` </p>
-<p>Try not to get confused by the syntax. To access data inside an object simply do �objectName.variableName� or �this.propertyName� if you’re inside the object - a property is anything you associate with that particular object. Personally I use the Constructor function or the Object Literal method which I’ll hopefully explain why in a future post. </p>
-
-    <!-- Only display the Read More link if we are displaying an excerpt -->
     
 </div>
 
