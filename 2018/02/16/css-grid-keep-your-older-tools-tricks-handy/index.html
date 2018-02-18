@@ -1,0 +1,115 @@
+<html>
+<!-- Head tag -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="A blog about programming.">
+    <meta name="author" content="BH0">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <link rel="icon" href="favicon/favicon.ico">
+    <title>BH0's Personal Blog</title>
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="/css/blog.css">
+
+    
+
+</head>
+
+<body>
+    <!-- Menu -->
+    <div class="blog-masthead">
+    <div class="container row center-xs middle-xs">
+        <nav class="blog-nav">
+            
+                <a class="blog-nav-item" href="/">Home |</a>
+            
+                <a class="blog-nav-item" href="/archives/">Archives |</a>
+            
+        </nav>
+    </div>
+</div>
+
+    <div class="container">
+        <!-- Blog Header: title and subtitle -->
+	<div class="header">
+        	<div class="blog-header">
+    <h1 class="blog-title">BH0&#39;s Blog</h1>
+    <p class="lead blog-description"></p>
+</div>
+
+	</div>
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-sm-8 blog-main">
+		         <div class="mainContent">
+	                <div class="blog-post">
+    <!-- Title -->
+    <h2 class="blog-post-title">
+        <a href="/2018/02/16/css-grid-keep-your-older-tools-tricks-handy/">
+            css grid - keep your older tools & tricks handy
+        </a>
+    </h2>
+    <!-- Date and Author -->
+    <p class="blog-post-meta">
+        2018-02-16
+        
+    </p>
+    <!-- Content -->
+    <p>CSS Grid has been announced somewhat recently so I figured I’d attempt to answer answer a very reasonable concern quickly. Sadly this isn’t a tutorial (no as I’ve said before I do intend in making one). And I make the assumption you’re aware of common web development and thus CSS trends.<br><a id="more"></a> </p>
+<p>Firstly, just a quick reminder as to what responsive means when referring to CSS layouts. Responsive simply means that the content shrinks appropriately to fit the browser, in that it “responds” to the site of the browser. If you’ve unfamilliar of responsive design, media queries, values of “display” (flex, grid, fixed etcetera), what a framework is, I strongly reccomend you research the terms I just listed. </p>
+<p>We were super excited when Flexbnox was announced, as it meant we could display content responsively much more easier - and while this is partly true, its not the main reason for using a CSS grid (though you can make a grid responsive very easily). </p>
+<p>So what is CSS grid, grid is a value for display (“display: grid”), which we can use to turn the nested content into grid-items. This mean we will be able to position them much more easier and use a literal grid for our website’s layout. </p>
+<p>This means the grid-items can only use its grid’s to decide how it looks on the page - not the surrounding content that is not within the grid - though the grid itself may be concered with the surrounding content (such as other grids). Grids also allow you to “slice” the content it contains up into individually grid-items which can have their own behavior (such as the third row being the only row that stretches). Basically, it allows us to further modularize the sections of the website to use their own coordinate systems and thus behavior depending on their coordinates. </p>
+<p>But, haven’t grids existed for ages you may ask? Well, slighly, but you had to “hack” yourself one together (or use a library such as FlexboxGrid) - the feature we are talking about in this post (CSS-Grid/s) are much easier to use. [Actually, I may do a tutorial on how to make an old fashioned grid using CSS3.] </p>
+<p>So in conclusion, if you thought that CSS grid would be your only goto tool for responsive websites - you’re wrong (with the exception of simple websites), for example, you could use flex on the outer part of your website and grids for the individual containers - vice versa. Long story short, frameworks / libraries etcetera and other CSS properties are still going to be useful except you just won’t be relying on them as much - and your solutions will feel less “hackier”. So, don’t go removing all evidence from Bootstrap just for its grid-system on your Github account just yet. </p>
+
+    <hr />
+    <!-- Tags and Categories links -->
+    
+
+    
+
+</div>
+
+		           </div> 
+            </div>
+            <!-- Sidebar -->
+            <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+		<div class="sidebar">
+	                <div class="sidebar col-xs-2"> 	
+	<div class="sidebar-module sidebar-module-inset">
+    		<h4>About</h4>
+	    	<p> A technology blog. </p>
+	</div>
+	<div class="sidebar-module">
+		<h4>Archives</h4>
+    		<ol class="list-unstyled">
+		</ol>
+	</div>
+	<div class="sidebar-module">
+    		<h4>Elsewhere</h4>
+    		<ol class="list-unstyled">
+        		<li><a href="#">GitHub</a></li>
+        		<li><a href="#">Twitter</a></li>
+        		<!-- <li><a href="#">Facebook</a></li> -->
+    		</ol>
+	</div>
+</div>
+
+		</div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    
+    <!-- After footer scripts -->
+    
+</body>
+</html>
