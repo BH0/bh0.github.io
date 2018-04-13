@@ -1,0 +1,15 @@
+Materialize - the CSS material-design framework's newest beta has been released. And, the best part, it has not got JQueyr. 
+
+Materialize - the material design frontend framework, much like Bootstrap used to require JQuery as a dependency. When Materialize was first created, this was far from an issue due to JQuery's popularity back then. But as JQuery becomes less dominant, Materialize made what I believe to a wonderful decision - to not depend on it.  And it has made me love this framework much more than what I used to (which was a lot, to begin with). 
+
+<!-- more --> 
+
+Don't panic; you can still use JQuery with Materialize if you like, the documentation examples still include JQuery as well as the vanilla Javascript equivalent (which is disappointedly still in ES5 syntax). 
+
+Materialize used to use JQuery for its plugins, but now most (possibly all) the expected plugins work without the need of JQuery. This is good because it means you no longer need a massive library that is JQuery in your code when you' are only using a small portion of it and there are better alternatives out there. 
+
+I didn't have enough time to snoop at all of the source code but it appears the developers have smartly made JQuery "erased" JQuery (may do a blog post on this). 
+
+I am not going to provide any examples as Materialize's documentation does this good enough. Check the Github repository, website and https://github.com/Dogfalo/materialize/releases for more information. 
+
+I am yet to ask the question of whether other frameworks will follow but I suspect at least one will. 
